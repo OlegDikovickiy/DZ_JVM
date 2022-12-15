@@ -8,7 +8,7 @@ public class JvmComprehension {
                                         //    отправляет ее в тот же фрейм в стеке
         Integer ii = 2;                 // 3. Выделяем память в хипе и добавляем ссылку в стек
         printAll(o, i, ii);             // 4. Вызовом метода printAll в стеке запускается новый фрейм 
-        System.out.println("finished"); // 7. Создается новый фрейм в стеке для метода println
+        System.out.println("finished"); // 7. Создается новый фрейм в стеке для метода println, после отработки метода срабатывает сборщик мусора и очищает очередь
     }
 
     private static void printAll(Object o, int i, Integer ii) {
